@@ -1,0 +1,13 @@
+mysql下提示ERROR 1044 (42000): Access denied for user ''@'localhost' to database
+
+1、关闭mysql
+#service mysqld stop
+
+2、屏蔽权限
+#mysqld_safe  --skip-grant-table
+屏幕出现：Starting demo from...
+
+3、新开启一个终端输入
+#mysql -u root mysql 
+mysql>delete from user where USER='';
+mysql>FLUSH PRIBILEGES;//记住要这句话，否则如果关闭先前的终端，又会出现原来的错误。
