@@ -1,0 +1,4 @@
+使用find / -name '你要找的文件名'
+
+例如：查找php.ini在哪里
+find / -name 'php.ini'
